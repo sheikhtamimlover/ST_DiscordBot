@@ -1,0 +1,32 @@
+{
+  "prefix": "!",
+  "databaseType": "json",
+  "databaseUrl": "",
+  "botToken": "ADD UR BOT TOKEN",
+  "botClientId": "ADD YOUR BOT CLIENTID",
+  "adminUIDs": ["YOUR ADMIN UID"],
+  "dashboardPort": 3000,
+  "timezone": "Asia/Dhaka",
+  "showBanner": true,
+  "skipCmds": [],
+  "skipEvents": [],
+  "reactUnsend": {
+    "enabled": true,
+    "emoji": "👍"
+  },
+  "adminOnly": false,
+  "dmNotifyOnStart": true,
+  "commandSuggestions": true,
+  "autoUptime": {
+    "enable": true,
+    "url": "",
+    "timeInterval": 180
+  },
+  "serverUptime": {
+    "port": 5000,
+    "socket": {
+      "channelName": "uptime",
+      "verifyToken": "stdicordbot"
+    }
+  }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ST Discord Bot - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">
+                    <span class="icon">🤖</span>
+                    ST Discord Bot
+                </h1>
+                <div class="status-indicator">
+                    <span class="status-dot" id="statusDot"></span>
+                    <span class="status-text" id="statusText">Loading...</span>
+                </div>
+            </div>
+            <div class="header-subtitle" id="botInfo">
+                Loading bot information...
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="stats-section">
+                <h2 class="section-title">Bot Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-content">
+                            <div class="stat-label">Uptime</div>
+                            <div class="stat-value" id="uptime">-</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-content">
+                            <div class="stat-label">Commands</div>
+                            <div class="stat-value" id="commandsCount">-</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-content">
+                            <div class="stat-label">Events</div>
+                            <div class="stat-value" id="eventsCount">-</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏰</div>
+                        <div class="stat-content">
+                            <div class="stat-label">Servers</div>
+                            <div class="stat-value" id="serversCount">-</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-content">
+                            <div class="stat-label">Users</div>
+                            <div class="stat-value" id="usersCount">-</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💾</div>
+                        <div class="stat-content">
+                            <div class="stat-label">Memory</div>
+                            <div class="stat-value" id="memoryUsage">-</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="system-section">
+                <h2 class="section-title">System Information</h2>
+                <div class="system-grid">
+                    <div class="system-card">
+                        <div class="system-row">
+                            <span class="system-label">Node Version:</span>
+                            <span class="system-value" id="nodeVersion">-</span>
+                        </div>
+                        <div class="system-row">
+                            <span class="system-label">Platform:</span>
+                            <span class="system-value" id="platform">-</span>
+                        </div>
+                        <div class="system-row">
+                            <span class="system-label">Architecture:</span>
+                            <span class="system-value" id="arch">-</span>
+                        </div>
+                    </div>
+                    <div class="system-card">
+                        <div class="system-row">
+                            <span class="system-label">CPU Model:</span>
+                            <span class="system-value" id="cpuModel">-</span>
+                        </div>
+                        <div class="system-row">
+                            <span class="system-label">CPU Cores:</span>
+                            <span class="system-value" id="cpuCores">-</span>
+                        </div>
+                        <div class="system-row">
+                            <span class="system-label">System Uptime:</span>
+                            <span class="system-value" id="systemUptime">-</span>
+                        </div>
+                    </div>
+                    <div class="system-card">
+                        <div class="system-row">
+                            <span class="system-label">Total Memory:</span>
+                            <span class="system-value" id="totalMemory">-</span>
+                        </div>
+                        <div class="system-row">
+                            <span class="system-label">Used Memory:</span>
+                            <span class="system-value" id="usedMemory">-</span>
+                        </div>
+                        <div class="system-row">
+                            <span class="system-label">Free Memory:</span>
+                            <span class="system-value" id="freeMemory">-</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="commands-section">
+                <h2 class="section-title">Commands</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody id="commandsTable">
+                            <tr>
+                                <td colspan="4" class="loading-cell">Loading commands...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="events-section">
+                <h2 class="section-title">Events</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Event Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id="eventsTable">
+                            <tr>
+                                <td colspan="3" class="loading-cell">Loading events...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Last updated: <span id="lastUpdated">Never</span></p>
+            <p>Auto-refresh: Every 5 seconds</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
