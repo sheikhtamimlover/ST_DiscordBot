@@ -1,7 +1,7 @@
 [
   {
     "version": "1.0.0",
-    "note": "ST_WhatsappBot",
+    "note": "ST_DiscordBot",
     "files": {},
     "deleteFiles": {},
     "reinstallDependencies": false,
